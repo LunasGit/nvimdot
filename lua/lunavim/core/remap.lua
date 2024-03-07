@@ -55,7 +55,7 @@ vim.keymap.set("v", "<leader>d", "\"_d") --delete into void visual mode
 vim.keymap.set("n", "<leader>lg", vim.cmd.LazyGit)
 
 -- Fugitive Mapping
-vim.keymap.set("n", "<leader>gc", ":Git commit -m ''<left>")
+vim.keymap.set("n", "<leader>gc", ':Git commit -m ""<left>')
 vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
 vim.keymap.set("n", "<leader>gd", ":Git diff<CR>")
 
