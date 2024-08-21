@@ -2,6 +2,10 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.keymap.set("i", "jj", "<Esc>")
 
+vim.keymap.set("n", "H", "^")
+vim.keymap.set("n", "L", "$")
+vim.keymap.set("n", "M", "%")
+
 -- colorpicker
 vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>")
 vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>")
@@ -45,8 +49,7 @@ vim.keymap.set("n", "<leader>y", "\"+y") -- yank into system clipboard
 vim.keymap.set("v", "<leader>y", "\"+y") -- yank into system clipboard visual mode
 vim.keymap.set("n", "<leader>Y", "\"+Y") -- yank full line to system clipboard
 
-vim.keymap.set("n", "<leader>d", "\"_d") --delete into void
-vim.keymap.set("v", "<leader>d", "\"_d") --delete into void visual mode
+vim.keymap.set("n", "x", "\"_x") --single character delete into void
 
 vim.keymap.set("n", "<leader>lg", vim.cmd.LazyGit)
 
