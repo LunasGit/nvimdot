@@ -17,7 +17,6 @@ require('lazy').setup({
   { import = 'lunavim.plugins.git' },
   { import = 'lunavim.plugins.qol' },
   { import = 'lunavim.plugins.layout' },
-  { import = 'lunavim.plugins.python' },
   { import = 'lunavim.plugins.completion' },
 },
 

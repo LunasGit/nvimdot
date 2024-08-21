@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("i", "jj", "<Esc>")
 
 -- colorpicker
 vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>")
@@ -20,13 +21,8 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- split management
-vim.keymap.set("n", "<leader>ws", "<C-w><C-s><C-w><C-j>") -- split window horizontally and jump to it
 vim.keymap.set("n", "<leader>ts", "<C-w><C-s><C-w><C-j>:term<CR>") -- split window horizontally as terminal and jump to it
-vim.keymap.set("n", "<leader>wv", "<C-w>v<C-w><C-l>") -- split window vertically and jump to it
 vim.keymap.set("n", "<leader>tv", "<C-w>v<C-w><C-l>:term<CR>") -- split window vertically as terminal and jump to it
-vim.keymap.set("n", "<leader>wn", "<C-w>n") -- create new window and start editing empty file in it
-vim.keymap.set("n", "<leader>wd", "<C-w>c") -- close currently active window
 
 -- exit terminal mode with esc
 vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
@@ -66,6 +62,4 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz") ]]
 
 -- replace all instances of word you are on
-vim.keymap.set("n", "<leader>ra", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-
--- hop
+vim.keymap.set("n", "<leader>rn", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
