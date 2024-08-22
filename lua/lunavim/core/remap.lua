@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 local keyset = vim.keymap.set
+
 keyset("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-keyset("i", "jj", "<Esc>")
+keyset("i", "jk", "<Esc>")
 
 -- line nav qol
 keyset("n", "H", "^")

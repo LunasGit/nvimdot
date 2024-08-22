@@ -38,3 +38,4 @@ vim.opt.scrolloff = 10
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 
+vim.opt.conceallevel = 2

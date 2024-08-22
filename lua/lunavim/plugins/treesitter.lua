@@ -9,7 +9,8 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
       autotag = { enable = true },
-      auto_install = true
+      auto_install = true,
+      ensure_installed = {"markdown", "markdown_inline"}
     })
   end
 }
