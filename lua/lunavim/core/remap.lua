@@ -4,6 +4,7 @@ local keyset = vim.keymap.set
 keyset("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 keyset("i", "jj", "<Esc>")
 
+
 -- line nav qol
 keyset("n", "H", "^")
 keyset("n", "L", "$")
@@ -64,4 +65,3 @@ keyset("n", "<leader>gd", ":Git diff<CR>")
 -- replace all instances of word you are on
 keyset("n", "<leader>rn", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
-keyset("n", "<leader>ls", ":LiveServerToggle<CR>")
