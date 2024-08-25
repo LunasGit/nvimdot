@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 local keyset = vim.keymap.set
 
 keyset("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-keyset("i", "jk", "<Esc>")
+keyset("i", "jj", "<Esc>")
 
 -- line nav qol
 keyset("n", "H", "^")
@@ -10,8 +10,8 @@ keyset("n", "L", "$")
 keyset("n", "M", "%")
 
 -- colorpicker
-keyset("n", "<C-c>", "<cmd>PickColor<cr>")
-keyset("i", "<C-c>", "<cmd>PickColorInsert<cr>")
+keyset("n", "<C-c>", "<cmd>PickColor<CR>")
+keyset("i", "<C-c>", "<cmd>PickColorInsert<CR>")
 
 -- Lazy
 keyset("n", "<leader>ll", vim.cmd.Lazy, { desc = "Open Lazy Window" })
@@ -64,9 +64,4 @@ keyset("n", "<leader>gd", ":Git diff<CR>")
 -- replace all instances of word you are on
 keyset("n", "<leader>rn", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
--- quickfix nav
---[[ vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz") ]]
-
+keyset("n", "<leader>ls", ":LiveServerToggle<CR>")

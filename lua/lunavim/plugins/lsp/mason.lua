@@ -21,8 +21,10 @@ return {
     mason_lspconfig.setup({
 
       ensure_installed = {
-        'pyright',
         'lua_ls',
+        'emmet_ls',
+        'cssls',
+        'html'
       },
 
       automatic_installation = true,

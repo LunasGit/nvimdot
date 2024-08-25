@@ -10,4 +10,3 @@ return {
     {'<C-p>', '<cmd>Telescope git_files<CR>', desc = 'Git Files'},
   },
 }
-
