@@ -36,7 +36,6 @@ keyset("n", "<leader>tv", "<C-w>v<C-w><C-l>:term<CR>") -- split window verticall
 keyset("t", "<esc>", "<C-\\><C-n>")
 
 -- buffer
-keyset("n", "<Tab>", vim.cmd.bnext) -- next buffer
 keyset("n", "<leader>db", vim.cmd.bd) -- remove current buffer
 
 -- general quality of life

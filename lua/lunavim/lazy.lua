@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   { import = 'lunavim.plugins' },
-  { import = 'lunavim.plugins.git' },
   { import = 'lunavim.plugins.qol' },
   { import = 'lunavim.plugins.layout' },
 },
