@@ -1,6 +1,6 @@
 {
   "BoilerplateHTML5": {
-    "prefix": ["html5"],
+    "prefix": ["html"],
     "body": [
       "<!DOCTYPE html>",
       "<html lang=\"en\">",

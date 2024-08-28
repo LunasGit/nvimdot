@@ -1,0 +1,18 @@
+{
+  "cmaketemp": {
+    "prefix": ["cmaketemp"],
+    "body": [
+      "cmake_minimum_required(VERSION $0)",
+      " ",
+      "project()",
+      " ",
+      "add_library()",
+      "target_include_directories()",
+      "target_compile_features()",
+      " ",
+      "add_executable()",
+      "target_link_libraries()"
+    ],
+    "description": "CMake boilerplate"
+  }
+}

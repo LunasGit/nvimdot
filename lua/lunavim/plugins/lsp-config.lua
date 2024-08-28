@@ -11,7 +11,8 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {"lua_ls", "clangd", "cssls",
-                            "emmet_ls", "html", "eslint"}
+                            "emmet_ls", "html", "eslint",
+                            "jsonls"}
       })
     end
   },
@@ -20,52 +21,18 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      local keyset = vim.keymap.set
 
-      lspconfig.lua_ls.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['lua_ls'] = {},
-        },
-      }
+      lspconfig.lua_ls.setup {}
+      lspconfig.clangd.setup {}
+      lspconfig.cssls.setup {}
+      lspconfig.emmet_ls.setup {}
+      lspconfig.html.setup {}
+      lspconfig.eslint.setup {}
 
-      lspconfig.clangd.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['clangd'] = {},
-        },
-      }
-
-      lspconfig.cssls.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['cssls'] = {},
-        },
-      }
-
-      lspconfig.emmet_ls.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['emmet_ls'] = {},
-        },
-      }
-
-      lspconfig.html.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['html'] = {},
-        },
-      }
-
-      lspconfig.eslint.setup {
-        -- Server-specific settings. See `:help lspconfig-setup`
-        settings = {
-          ['eslint'] = {},
-        },
-      }
-
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      vim.keymap.set({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
+      keyset("n", "K", vim.lsp.buf.hover, {})
+      keyset('n', 'gd', vim.lsp.buf.definition, {})
+      keyset({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, {})
     end
   },
 }

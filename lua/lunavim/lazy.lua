@@ -17,13 +17,13 @@ require('lazy').setup({
   { import = 'lunavim.plugins.layout' },
 },
 
-{
-  checker = {
-    enabled = true,
-    notify = false,
-  },
-  change_detection = {
-    notify = false,
-  },
-})
+  {
+    checker = {
+      enabled = true,
+      notify = false,
+    },
+    change_detection = {
+      notify = false,
+    },
+  })
 

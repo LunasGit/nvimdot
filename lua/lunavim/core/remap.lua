@@ -4,6 +4,7 @@ local keyset = vim.keymap.set
 keyset("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 keyset("i", "jj", "<Esc>")
 
+keyset("n", "K", vim.lsp.buf.hover, {})
 
 -- line nav qol
 keyset("n", "H", "^")
@@ -36,6 +37,7 @@ keyset("n", "<leader>tv", "<C-w>v<C-w><C-l>:term<CR>") -- split window verticall
 keyset("t", "<esc>", "<C-\\><C-n>")
 
 -- buffer
+keyset("n", "<Tab>", vim.cmd.bnext) -- next buffer
 keyset("n", "<leader>db", vim.cmd.bd) -- remove current buffer
 
 -- general quality of life
@@ -51,8 +53,6 @@ keyset("n", "N", "Nzzzv") -- keep cursor in middle during searches
 keyset("n", "<leader>y", "\"+y") -- yank into system clipboard
 keyset("v", "<leader>y", "\"+y") -- yank into system clipboard visual mode
 keyset("n", "<leader>Y", "\"+Y") -- yank full line to system clipboard
-
-keyset("n", "x", "\"_x") --single character delete into void
 
 keyset("n", "<leader>lg", vim.cmd.LazyGit)
 
