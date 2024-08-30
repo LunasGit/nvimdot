@@ -7,5 +7,43 @@
       "}"
     ],
     "description": "Namespace"
+  },
+
+  "dowhile": {
+    "prefix": ["dw"],
+    "body": [
+      "do{",
+      "  $1",
+      "}while($0);"
+    ],
+    "description": "Do while loop"
+  },
+
+  "if": {
+    "prefix": ["if"],
+    "body": [
+      "if($0){",
+      "  ",
+      "}"
+    ],
+    "description": "If statement"
+  },
+  "elseif": {
+    "prefix": ["elseif"],
+    "body": [
+      "else if($0){",
+      "  ",
+      "}"
+    ],
+    "description": "Else if statement"
+  },
+  "else": {
+    "prefix": ["else"],
+    "body": [
+      "else{",
+      "  $0",
+      "}"
+    ],
+    "description": "Else statement"
   }
 }
