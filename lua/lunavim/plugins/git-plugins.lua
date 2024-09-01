@@ -1,7 +1,6 @@
 return {
-  {
-    'kdheepak/lazygit.nvim',
-  },
+  {'kdheepak/lazygit.nvim'},
+  {'tpope/vim-fugitive'},
 
   'lewis6991/gitsigns.nvim',
   config = function()
