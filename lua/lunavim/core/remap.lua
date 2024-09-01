@@ -57,6 +57,7 @@ keyset("n", "<leader>Y", "\"+Y") -- yank full line to system clipboard
 keyset("n", "<leader>lg", vim.cmd.LazyGit)
 
 -- Fugitive Mapping
+keyset("n", "<leader>ga", ':Git add %:h<CR>')
 keyset("n", "<leader>gc", ':Git commit -m ""<left>')
 keyset("n", "<leader>gp", ":Git push<CR>")
 keyset("n", "<leader>gd", ":Git diff<CR>")
