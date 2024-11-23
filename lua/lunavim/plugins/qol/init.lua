@@ -12,46 +12,6 @@ return {
   },
 
   {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({
-        surrounds = {
-          ["("] = {
-            add = { "(", ")" },
-            find = function()
-              return M.get_selection({ motion = "a(" })
-            end,
-            delete = "^(. ?)().-( ?.)()$",
-          },
-          ["{"] = {
-            add = { "{", "}" },
-            find = function()
-              return M.get_selection({ motion = "a{" })
-            end,
-            delete = "^(. ?)().-( ?.)()$",
-          },
-          ["<"] = {
-            add = { "<", ">" },
-            find = function()
-              return M.get_selection({ motion = "a<" })
-            end,
-            delete = "^(. ?)().-( ?.)()$",
-          },
-          ["["] = {
-            add = { "[", "]" },
-            find = function()
-              return M.get_selection({ motion = "a[" })
-            end,
-            delete = "^(. ?)().-( ?.)()$",
-          }
-        },
-      })
-    end
-  },
-
-  {
     'stevearc/oil.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
