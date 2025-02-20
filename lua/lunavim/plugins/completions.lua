@@ -41,6 +41,11 @@ return {
           { name = "buffer" },
         }),
       })
+      cmp.setup.filetype({"text", "markdown"}, {
+        sources = cmp.config.sources({
+          { name = "buffer" },
+        }),
+      })
     end,
   },
 }
