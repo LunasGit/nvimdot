@@ -6,15 +6,6 @@ keyset("i", "jj", "<Esc>")
 
 keyset("n", "K", vim.lsp.buf.hover, {})
 
--- line nav qol
-keyset("n", "H", "^")
-keyset("n", "L", "$")
-keyset("n", "M", "%")
-
--- colorpicker
-keyset("n", "<C-c>", "<cmd>PickColor<CR>")
-keyset("i", "<C-c>", "<cmd>PickColorInsert<CR>")
-
 -- Lazy
 keyset("n", "<leader>ll", vim.cmd.Lazy, { desc = "Open Lazy Window" })
 
@@ -30,6 +21,7 @@ keyset("n", "<C-j>", "<C-w>j")
 keyset("n", "<C-k>", "<C-w>k")
 keyset("n", "<C-l>", "<C-w>l")
 
+
 keyset("n", "<leader>ts", "<C-w><C-s><C-w><C-j>:term<CR>") -- split window horizontally as terminal and jump to it
 keyset("n", "<leader>tv", "<C-w>v<C-w><C-l>:term<CR>") -- split window vertically as terminal and jump to it
 
@@ -37,8 +29,9 @@ keyset("n", "<leader>tv", "<C-w>v<C-w><C-l>:term<CR>") -- split window verticall
 keyset("t", "<esc>", "<C-\\><C-n>")
 
 -- buffer
-keyset("n", "<Tab>", vim.cmd.bnext) -- next buffer
-keyset("n", "<leader>db", vim.cmd.bd) -- remove current buffer
+vim.keymap.set("n", "<Tab>", ":bnext<CR>", { silent = true, desc = "Next buffer" })
+vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", { silent = true, desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { silent = true, desc = "Close buffer" })
 
 -- general quality of life
 keyset("v", "K",":m '<-2<CR>gv=gv") -- move selection up

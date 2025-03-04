@@ -1,4 +1,8 @@
 return {
+
+  'tpope/vim-repeat',
+  'windwp/nvim-ts-autotag',
+
   {
     'numToStr/Comment.nvim',
     event = { 'BufReadPre', 'BufNewFile' },

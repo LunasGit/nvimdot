@@ -16,11 +16,7 @@ vim.opt.smartindent = true
 
 -- cursorline
 vim.opt.cursorline = true
--- main stuff
 vim.opt.cursorlineopt = 'number'
-
--- folds
--- vim.opt.foldclose = 'all'
 
 -- file backup
 vim.opt.swapfile = false
@@ -37,6 +33,7 @@ vim.opt.scrolloff = 10
 -- misc
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
+vim.opt.showmode = false
 
 vim.opt.conceallevel = 2
 
